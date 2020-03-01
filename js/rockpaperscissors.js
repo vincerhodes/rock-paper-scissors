@@ -9,7 +9,7 @@ while (continueGame == "y") {
   play();
 
   // play again code
-  while (continueGame != "n" && continueGame != "y") {
+  do (continueGame != "n" && continueGame != "y") {
     console.log("Do you wish to play again? (y/n)");
     continueGame = readline();
     if (continueGame != "n" && continueGame != "y") {
