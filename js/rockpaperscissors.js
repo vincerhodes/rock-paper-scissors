@@ -9,13 +9,13 @@ while (continueGame == "y") {
   play();
 
   // play again code
-  do (continueGame != "n" && continueGame != "y") {
-    console.log("Do you wish to play again? (y/n)");
-    continueGame = readline();
+  do  {
+    continueGame = prompt("Do you wish to play again? (y/n)");
     if (continueGame != "n" && continueGame != "y") {
       console.log("Please enter 'y' or 'n' followed by enter");
     }
   }
+  while (continueGame != "n" && continueGame != "y");
 
 }
 
