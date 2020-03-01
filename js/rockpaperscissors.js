@@ -1,18 +1,18 @@
 
 // initial setup of variables
-var continue = "y";
+var continueGame = "y";
 
 //main while loop for the game
-while (continue == "y") {
+while (continueGame == "y") {
 
   // call the play function
   play();
 
   // play again code
-  while (continue != "n" && continue != "y") {
+  while (continueGame != "n" && continueGame != "y") {
     console.log("Do you wish to play again? (y/n)");
-    continue = readline();
-    if (continue != "n" && continue != "y") {
+    continueGame = readline();
+    if (continueGame != "n" && continueGame != "y") {
       console.log("Please enter 'y' or 'n' followed by enter");
     }
   }
@@ -21,5 +21,5 @@ while (continue == "y") {
 
 // code to play the game
 function play() {
-  
+
 }
