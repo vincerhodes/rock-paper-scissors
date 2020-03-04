@@ -17,6 +17,8 @@ function main() {
   // use a while loop to continue playing until user chooses to stop
   while (continueOptions[continueChoice]) {
 
+    var continueText;
+
     // take input from the player
     do {
       playerSelection = prompt("Please choose rock, paper or scissors (type the full word)").toLowerCase();
@@ -33,15 +35,17 @@ function main() {
 
     // simulate the game given the choices and output the result to the console
     outcome = playRound(playerSelection, computerSelection);
-    console.log(`Player chose ${playerSelection}, computer chose ${computerSelection}`);
-    console.log(resultOptions[outcome]);
+
+    continueText = `Player chose ${playerSelection}, computer chose ${computerSelection}\n`;
+    continueText += resultOptions[outcome] + '\n\n';
 
     // play again code
     do  {
-      continueChoice = prompt("Do you wish to play again? (y/n)");
+      continueText += "Do you wish to play again? (y/n)"
+      continueChoice = prompt(continueText);
       // handle invalid selection with console output
       if (!(continueChoice in continueOptions)) {
-        console.log("Invalid choice, please enter 'y' or 'n' followed by enter");
+        continueText = "Invalid choice, please enter 'y' or 'n' followed by enter\n\n";
       }
     }
     // loops back to the start of the do-while loop if selection is invalid
