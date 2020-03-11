@@ -1,9 +1,9 @@
 
 // initialise constants
 const choices = {rock: 0, paper: 1, scissors: 2};
-const images = {rock: "/img/rock2.png",
-  paper: "/img/paper2.png",
-  scissors: "/img/scissors2.png"
+const images = {rock: "rock-paper-scissors/img/rock2.png",
+  paper: "rock-paper-scissors/img/paper2.png",
+  scissors: "rock-paper-scissors/img/scissors2.png"
 };
 const resultOptions = ["You lose!", "You win!", "It's a tie!"];
 
