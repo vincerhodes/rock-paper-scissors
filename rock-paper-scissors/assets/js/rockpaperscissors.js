@@ -1,9 +1,9 @@
 
 // initialise constants
 const choices = {rock: 0, paper: 1, scissors: 2};
-const images = {rock: "rock-paper-scissors/img/rock2.png",
-  paper: "rock-paper-scissors/img/paper2.png",
-  scissors: "rock-paper-scissors/img/scissors2.png"
+const images = {rock: "rock-paper-scissors/assets/img/rock2.png",
+  paper: "rock-paper-scissors/assets/img/paper2.png",
+  scissors: "rock-paper-scissors/assets/img/scissors2.png"
 };
 const resultOptions = ["You lose!", "You win!", "It's a tie!"];
 
@@ -13,7 +13,7 @@ var result;
 
 // setup DOM selections
 const startButton = document.querySelector('.btn');
-const rpsButtons = document.querySelectorAll('.rps');
+const rpsButtons = document.querySelectorAll('.rpsbtn');
 const commentary = document.querySelector('.commentary');
 const playerChoiceImage = document.querySelector('#player-choice');
 const computerChoiceImage = document.querySelector('#computer-choice');
@@ -25,6 +25,7 @@ startButton.addEventListener('click', () => initializeGame());
 rpsButtons.forEach((button) => {
   button.addEventListener('click', () => {
     if (tracker.game_in_progress) {
+      console.log(button.id);
       playRound(button.id);
     };
   });
@@ -45,7 +46,6 @@ function updateScores() {
   scores[0].textContent = tracker.player;
   scores[1].textContent = tracker.computer;
   if (tracker.player > tracker.computer) {
-    console.log("blah");
     scores[0].style.color = "green";
     scores[1].style.color = "red";
   } else if (tracker.rounds_played == 0) {
